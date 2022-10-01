@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>ListView</title>
+</head>
+<body>
+	{% for object in bills %}
+    <!-- Display Objects -->
+    {{ object.Name}}
+   {{ object.Amount }}<a href="./page5/{{object.id}} "style='margin-left:1em;text-decoration:none;background: black;color: white;'>Update<a href="./page6/{{object.id}} "style='margin-left:1em;text-decoration:none;background: black;color: white;'>Delete
+   </a>
+  
+  
+    <!-- If objet_list is empty  -->
+    {% empty %}
+   No objects yet.
+    {% endfor %}
+</body>
+</html>

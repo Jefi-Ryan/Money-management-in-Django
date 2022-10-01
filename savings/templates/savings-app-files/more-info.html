@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+	update
+</title>
+<style>
+	.btn{
+		background: black;
+		color: white;
+		width: 7em;
+		height: 3em;
+		font-family: 'Encode Sans SC', sans-serif;
+		font-size: medium;
+		padding: .5em .5em .5em .5em;
+
+	}
+	.btn:hover{
+		background: white;
+		color: black;
+	}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Encode Sans SC', sans-serif;margin-top: 3em;">
+	<center>
+		{%if data == 'No Bills' %}
+			<p>No Bills</p>
+		{%else%}
+	<table border="3" cellspacing='1' cellpadding="7" width='80%'>
+	<tr>
+	<th>List no</th>
+		<th>Bill Name</th>
+		<th>Bill Amount</th>
+		</tr>
+		
+		{%for item in data%}
+		
+		<tr>
+			<td>{{forloop.counter}}</td>
+			<td>
+	<a style="text-decoration: none" href="{{item.geturl}}">{{item.Name}}</a>
+	</td>
+			<td>{{item.Amount}}</td>
+</tr>
+		{%endfor%}
+	</table><br></br>
+	</center>
+	{%endif%}
+	<form action="../../">
+		<center>
+		<button class="btn" >Home</button></center>
+	</form>
+	<center>
+	</center>
+</body>
+</html>

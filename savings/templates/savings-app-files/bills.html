@@ -1,0 +1,250 @@
+<html>
+<title>
+	New Bill
+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500&display=swap" rel="stylesheet">
+<style>
+	.main{
+		
+		
+		border: 1px solid black;
+		width: 50%;
+		height: 70%;
+		margin: 10% 10% 10% 20%;
+		padding: 3em 3em 3em 3em;
+		border-radius: 2em 2em;
+		box-shadow: 1px 1px 40px 1px grey;
+
+
+	}
+	.submit{
+		margin-left: 1em;
+		
+	}
+	table{
+		margin-right: 0em;
+
+	}
+	.form{
+		margin-top:2em ;
+		margin-bottom: 2em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid grey;
+	}
+	.all{
+		display: flex;
+		flex-direction: column;
+		
+		margin: 0 auto;
+		font-family: 'Encode Sans SC', sans-serif;
+	}
+	.button{
+		background: #e05819;
+		color: white;
+		width: 100%;
+		height: 100%;
+	}
+	.button:hover{
+		
+		animation-name: btn;
+		animation-duration:.35s ;
+		animation-timing-function: linear;
+		background: linear-gradient(90deg, white 100%, #e05819 0%);
+			color: black;
+	}
+	.add{
+		background: black;
+		color: white;
+		width: 20%;
+		height: 100%;
+	}
+	.add:hover{
+		
+		animation-name: btn-green;
+		animation-duration:.35s ;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+		color:white;
+	}
+	.homebtn{
+		background: black;
+		color: white;
+		width: 5em;
+		height: 2.5em;
+		font-family: 'Encode Sans SC', sans-serif;
+		font-size: small;
+		padding: .5em .5em .5em .5em;
+
+	}
+	.homebtn:hover{
+		background: white;
+		color: black;
+	}
+	@keyframes btn-green{
+		0%{
+			
+			background: linear-gradient(90deg, #68ed8c 100%, black 0%);
+			color: black;
+		}
+		5%{
+			
+			background: linear-gradient(90deg,#68ed8c 5%, black 95%);
+			color: black;
+		}
+		15%{
+			
+			background: linear-gradient(90deg,#68ed8c 15%, black 85%);
+			color: black;
+		}
+		25%{
+			
+			background: linear-gradient(90deg,#68ed8c 25%, black 75%);
+			color: black;
+		}
+		35%{
+			
+			background: linear-gradient(90deg,#68ed8c 35%, black 65%);
+			color: black;
+		}45%{
+			
+			background: linear-gradient(90deg, #68ed8c 45%, black 55%);
+			color: black;
+		}55%{
+			
+			background: linear-gradient(90deg, #68ed8c 55%, black 45%);
+			color: black;
+		}65%{
+			
+			background: linear-gradient(90deg, #68ed8c 65%,black 35%);
+			color: black;
+		}75%{
+			
+			background: linear-gradient(90deg, #68ed8c 75%, black 25%);
+			color: black;
+		}85%{
+			
+			background: linear-gradient(90deg, #68ed8c 85%, black 15%);
+			color: black;
+		}95%{
+			
+			background: linear-gradient(90deg, #68ed8c 95%, black 5%);
+			color: black;
+		}100%{
+			
+			background: linear-gradient(90deg, #68ed8c 100%, black 0%);
+			color: black;
+		}
+	}
+	@keyframes btn{
+		0%{
+			
+			background: linear-gradient(90deg, white 0%, #e05819 100%);
+			color: black;
+		}
+		5%{
+			
+			background: linear-gradient(90deg, white 5%, #e05819 95%);
+			color: black;
+		}
+		15%{
+			
+			background: linear-gradient(90deg, white 15%, #e05819 85%);
+			color: black;
+		}
+		25%{
+			
+			background: linear-gradient(90deg, white 25%, #e05819 75%);
+			color: black;
+		}
+		35%{
+			
+			background: linear-gradient(90deg, white 35%, #e05819 65%);
+			color: black;
+		}45%{
+			
+			background: linear-gradient(90deg, white 45%, #e05819 55%);
+			color: black;
+		}55%{
+			
+			background: linear-gradient(90deg, white 55%, #e05819 45%);
+			color: black;
+		}65%{
+			
+			background: linear-gradient(90deg, white 65%, #e05819 35%);
+			color: black;
+		}75%{
+			
+			background: linear-gradient(90deg, white 75%, #e05819 25%);
+			color: black;
+		}85%{
+			
+			background: linear-gradient(90deg, white 85%, #e05819 15%);
+			color: black;
+		}95%{
+			
+			background: linear-gradient(90deg, white 95%, #e05819 5%);
+			color: black;
+		}100%{
+			
+			background: linear-gradient(90deg, white 100%, #e05819 0%);
+			color: black;
+		}
+	}
+	
+
+</style>
+<bod>
+	<div class="all">
+	<div class="main">
+	<p><center><strong>New item</strong></center></p>
+	<div class="form">
+	
+	<form action=" " method="POST">{%csrf_token%}
+		<center>{{form.as_table}}
+		<input class='add' style="font-family: 'Encode Sans SC', sans-serif;" type="submit" class ='submit'value="Add"/></center>
+	</form>
+	
+	<form action="../../">
+		<center>
+		<button class="homebtn" >Home</button></center>
+	</form>
+	
+	</div>
+	<p><center><strong>All items</strong></center></p>
+	<center>
+	{% if result == 'No Bills'  %}
+		<p>No Bills</p>
+	{% else %}
+	<table border="3" cellspacing='1' cellpadding="7" width='80%'>
+		<tr>
+		<th>List no</th>
+		<th>Bill Name</th>
+		<th>Bill Amount</th>
+		<th>Remove</th>
+		</tr>
+		
+		{%for item in result%}
+		
+		<tr>
+			<td>{{forloop.counter}}</td>
+			<td>{{item.Name}}</td>
+			<td>{{item.Amount}}</td>
+			<form action="./delete-{{item.Name}}">
+		<td><input type="submit" style="font-family: 'Encode Sans SC', sans-serif;" class="button" value="Delete"></td>
+		</tr>
+			</form>
+		
+		{%endfor%}
+	</table></center>
+		{%endif%}
+		
+
+	
+	</div>
+	
+</div>
+	
+</body>
+</html>

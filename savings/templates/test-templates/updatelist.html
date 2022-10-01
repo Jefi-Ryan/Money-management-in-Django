@@ -1,0 +1,27 @@
+
+<html>
+    <head>
+        <title>ListView</title>
+        
+    </head>
+
+    <body>
+
+
+<h1 style="padding-bottom: 30px">list of posts</h1>
+
+{% for i in object_list %}
+<div style="margin-bottom: 40px">
+
+<h4>{{i.title}}</h4>
+<a href="{% url 'Post_update' i.id %}">update</a>
+
+</div>
+
+{% endfor %}
+
+<h3><a href="{% url 'create_article' %}">add</a></h3>
+
+    </body>
+
+</html>

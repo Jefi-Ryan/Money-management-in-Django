@@ -1,0 +1,41 @@
+<html>
+<head>
+	<style>
+	#main{
+
+	}
+	.form{
+		font-family: 'Lato', sans-serif; 
+		font-weight: bold;
+		margin: 10em 20em 10em 20em;
+		padding: .5em 0em 3em 0em;
+		border: 1px solid grey;
+		border-radius: 2em 2em;
+		box-shadow: 0px 0px 30px 1px grey;
+	}
+	.heading{
+		font-size: 2em;
+		font-weight: bold;
+	}
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<title>Create account</title>
+</head>
+<body>
+	<div id='main'>
+	<div class="form">
+	<center><p class="heading">Add Account</p></center>
+	
+	<form action=" " method="POST">{%csrf_token%}
+	<center>{{form.as_p}}</center>
+	<center><span><input type='submit' value='Submit'/></span></center>
+	</form>
+	<form action="../../">
+	<center><span><button>Home</button></span></center>
+	</form>
+	</div>
+	</div>
+</body>
+</html>

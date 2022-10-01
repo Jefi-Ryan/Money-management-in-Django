@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>RawListView</title>
+</head>
+<body>
+	{% for object in data %}
+    <!-- Display Objects -->
+    {{ object.Name}}
+   {{ object.Amount }}<a href="./update/{{object.id}} "style='margin-left:1em;text-decoration:none;background: black;color: white;'>Update<a href="./delete/{{object.id}} "style='margin-left:1em;text-decoration:none;background: black;color: white;'>Delete
+   </a><a href="./description/{{object.id}} "style='margin-left:1em;text-decoration:none;background: black;color: white;'>More Info
+   </a><br>
+  
+  
+    <!-- If objet_list is empty  -->
+    {% empty %}
+   No objects yet.
+    {% endfor %}
+</body>
+</html>

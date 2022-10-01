@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>Detail view</title>
+</head>
+<body>
+	<center>
+	{{data.Name}}-{{data.Amount}}<br><br>
+	{%for i in more%}
+	<a  style='text-decoration: none;' href="{{i.getdetail}}">{{i.Name}}</a><br>
+	{%endfor%}</center>
+</body>
+</html>

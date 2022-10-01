@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>AccountListView</title>
+</head>
+<body>
+	{% for object in accounts %}
+    <!-- Display Objects -->
+    {{ object.Company_name}}
+   {{ object.Monthly_salary }}<a href="./page5/{{object.id}} "style='margin-left:1em;text-decoration:none;background: black;color: white;'>Update<a href="./page6/{{object.id}} "style='margin-left:1em;text-decoration:none;background: black;color: white;'>Delete
+   </a><br>
+  
+  
+    <!-- If objet_list is empty  -->
+    {% empty %}
+   No objects yet.
+    {% endfor %}
+</body>
+</html>
