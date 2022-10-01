@@ -9,7 +9,7 @@ Create a virtual environment in cmd.
 
 ## Step 2:
 Go to the newly created virtual environment folder and activate the environment
-> cd (newly created virtual environment) && Scripts\activate
+> cd (virtual environment name) && Scripts\activate
 
 To deactivate the environment use,
 > deactivate
