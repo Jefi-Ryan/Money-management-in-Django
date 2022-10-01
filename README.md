@@ -4,7 +4,7 @@ Created this web application for basic money management.
 To try this web application
 
 ## Step 1:
-Create a virtual environment in cmd.
+Create a virtual environment using cmd.
 > python -m venv (your virtual environment name)
 
 ## Step 2:
