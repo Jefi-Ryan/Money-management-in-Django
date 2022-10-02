@@ -23,4 +23,4 @@ Run server
 python manage.py runserver
 ```
 ## Step 4:
-Visit 127.0.0.1:8000 which is the local host where the server runs.
+Visit `127.0.0.1:8000` which is the local host where the server runs.
